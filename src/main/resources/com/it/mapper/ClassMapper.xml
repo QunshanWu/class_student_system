@@ -32,10 +32,10 @@
                 class_name like concat('%', #{className}, '%')
             </if>
             <if test="startTime != null">
-                 and start_time &gt;= #{startTime}
+                 and start_time = #{startTime}
             </if>
             <if test="endTime != null">
-                and end_time &lt;= #{endTime}
+                and end_time = #{endTime}
             </if>
         </where>
         order by id
